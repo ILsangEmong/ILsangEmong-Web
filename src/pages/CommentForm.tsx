@@ -1,21 +1,18 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { api } from '../services/api';
+import { useState } from 'react';
+import { useRecoilValue } from 'recoil';
+import codeState from '../stores';
+import { CommentInfo } from '../services/api/types/juyeong';
 
 export default function CommentForm() {
-  const createComment = async () => {
-    const response = await api.juyeongService.createComment({
-      inviteCode: 'vQHTGS',
-      comment: '우리 몽몽이들은 너무너무 귀엽다',
-    });
+  const [comment, setComment] = useState('');
+  const code = useRecoilValue(codeState);
+  const createComment = async (commentInfo: CommentInfo) => {
+    const response = await api.juyeongService.createComment(commentInfo);
     console.log(response);
   };
-  // // 리뷰 텍스트 핸들링
-  // const handleTextChange = (e) => {
-  //   if (e.target.value) {
-  //     handleReviewText(e.target.value);
-  //   }
-  // };
 
   return (
     <StCommentForm>
@@ -24,14 +21,17 @@ export default function CommentForm() {
       <StContainer>
         <label>Q. 오늘의 일상 속 기억하고 싶은 일은 무엇이었나요?</label>
         <StInputReviewText
+          value={comment}
+          onChange={(e) => setComment(e.target.value)}
           placeholder="50자 이내로 내용을 적어주세요."
           maxLength={50}
-          // onChange={handleTextChange}
         />
       </StContainer>
 
       <Link to={'/group'}>
-        <StBtn onClick={createComment}>작성완료</StBtn>
+        <StBtn onClick={() => createComment({ inviteCode: code, comment: comment })}>
+          작성완료
+        </StBtn>
       </Link>
     </StCommentForm>
   );
