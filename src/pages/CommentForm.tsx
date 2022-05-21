@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useRecoilValue } from 'recoil';
 import codeState from '../stores';
 import { CommentInfo } from '../services/api/types/juyeong';
+import { ReactComponent as ImgComment } from '../assets/img_comment.svg';
 
 export default function CommentForm() {
   const [comment, setComment] = useState('');
@@ -17,9 +18,9 @@ export default function CommentForm() {
   return (
     <StCommentForm>
       <StTitle>GROUP NAME: 몽몽이들</StTitle>
-
       <StContainer>
         <label>Q. 오늘의 일상 속 기억하고 싶은 일은 무엇이었나요?</label>
+        <div>여러분들이 함께 경험한 일상을 기억 편지에 적어주세요. 배달은 저희가 합니다.</div>
         <StInputReviewText
           value={comment}
           onChange={(e) => setComment(e.target.value)}
@@ -33,6 +34,7 @@ export default function CommentForm() {
           작성완료
         </StBtn>
       </Link>
+      <ImgComment />
     </StCommentForm>
   );
 }
@@ -41,6 +43,13 @@ const StCommentForm = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  & > *:last-child {
+    position: absolute;
+    top: 444px;
+    left: 1205px;
+    margin-bottom: 5px;
+  }
 `;
 const StTitle = styled.div`
   width: 571px;
@@ -62,7 +71,7 @@ const StTitle = styled.div`
   line-height: 38px;
 
   margin-top: 40px;
-  margin-bottom: 211px;
+  margin-bottom: 160px;
 `;
 
 const StContainer = styled.div`
@@ -76,7 +85,18 @@ const StContainer = styled.div`
     line-height: 38px;
     color: #000000;
 
+    margin-bottom: 8px;
+  }
+  & > *:nth-child(2) {
     margin-bottom: 60px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    /* identical to box height, or 130% */
+
+    /* 4조_gray */
+
+    color: #b1b1b1;
   }
 
   display: flex;
@@ -99,6 +119,12 @@ const StInputReviewText = styled.textarea`
 
   outline: none;
   resize: none;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+
+  letter-spacing: -0.01em;
 
   &::placeholder {
     font-style: normal;
