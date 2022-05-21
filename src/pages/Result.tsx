@@ -18,11 +18,15 @@ export default function Result() {
   }, []);
   return (
     <Container>
-      <GroupName>그룹 참여 타이틀</GroupName>
+      <GroupName>
+        <span>몽몽이들의 추억</span>
+      </GroupName>
       {commentList.map((data, idx) => {
         return <CommentContainer key={idx}>{data}</CommentContainer>;
       })}
-      <ShareBtn onClick={() => setIsModal(!isModal)}>공유하기</ShareBtn>
+      <ShareBtn onClick={() => setIsModal(!isModal)}>
+        <span>일상추억 공유</span>
+      </ShareBtn>
       {isModal && (
         <ResultModal>
           <span>완성된 우리의 이야기</span>
@@ -42,8 +46,41 @@ const Container = styled.div`
   justify-content: column;
 `;
 
-const GroupName = styled.div``;
-const ShareBtn = styled.button``;
+const GroupName = styled.div`
+  width: 570px;
+  height: 80px;
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & > span {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+
+    color: #000000;
+  }
+`;
+const ShareBtn = styled.button`
+  width: 387px;
+  height: 80px;
+  background: #ffffff;
+  border: 2px solid #000000;
+  box-shadow: 10px 10px 0px #000000;
+  border-radius: 20px;
+  text-align: center;
+
+  & > span {
+    font-weight: 700;
+    font-size: 32px;
+    color: #000000;
+  }
+`;
 const CommentContainer = styled.div``;
 const ResultModal = styled.div`
   display: flex;
