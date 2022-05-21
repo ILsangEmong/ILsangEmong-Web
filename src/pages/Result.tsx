@@ -3,14 +3,19 @@ import { useRecoilValue } from 'recoil';
 import styled from 'styled-components';
 import { api } from '../services/api';
 import codeState from '../stores';
-import Background from '../asset/ImgBackground.png';
+// import Background from '../asset/ImgBackground.png';
+import { default as imgBg } from '../assets/bg_img.png';
+import { default as ImgLetter } from '../assets/img_letter.png';
+import { default as ImgStamp } from '../assets/stamp.svg';
 
 export default function Result() {
   const [commentList, setCommentList] = useState<string[]>([]);
   const code = useRecoilValue(codeState);
+  console.log('dd', code);
   const [isModal, setIsModal] = useState(false);
   const getResult = async (code) => {
-    const list = await api.seyoungService.getResult(code);
+    console.log(code);
+    const list = await api.seyoungService.getResult('DRW9pD');
     setCommentList(list);
   };
 
@@ -18,25 +23,23 @@ export default function Result() {
     getResult(code);
   }, []);
   return (
-    <Container url={Background}>
+    <Container url={imgBg}>
       <GroupName>
         <span>몽몽이들의 추억</span>
       </GroupName>
-      {commentList.map((data, idx) => {
-        return <CommentContainer key={idx}>{data}</CommentContainer>;
-      })}
-      <StyledBtn onClick={() => setIsModal(!isModal)}>
-        <span>일상추억 공유</span>
-      </StyledBtn>
-      {isModal && (
-        <ResultModal>
-          <span>완성된 우리의 이야기</span>
+      <StWrapper>
+        <img src={ImgLetter} />
+        <div>
           {commentList.map((data, idx) => {
             return <CommentContainer key={idx}>{data}</CommentContainer>;
           })}
-          <button>공유하기</button>
-        </ResultModal>
-      )}
+        </div>
+        <img src={ImgStamp} />
+      </StWrapper>
+
+      <StyledBtn onClick={() => setIsModal(!isModal)}>
+        <span>일상추억 공유</span>
+      </StyledBtn>
     </Container>
   );
 }
@@ -64,7 +67,7 @@ export const GroupName = styled.div`
   border-radius: 20px;
   text-align: center;
   display: flex;
-  margin-bottom: 790px;
+  margin-bottom: 75px;
   align-items: center;
   justify-content: center;
   & > span {
@@ -108,13 +111,41 @@ export const StyledBtn = styled.button`
   font-size: 32px;
   line-height: 38px;
 
-  margin-top: 40px;
-  margin-bottom: 75px;
+  margin-top: 95px;
+  margin-bottom: 90px;
 `;
-const CommentContainer = styled.div``;
-const ResultModal = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: column;
-  justify-content: column;
+const CommentContainer = styled.div`
+  border-bottom: 5px solid #000000;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  padding: 22px 0 12px 0;
+  width: 100%;
+`;
+
+const StWrapper = styled.div`
+  position: relative;
+  width: 1163.85px;
+  min-height: 620px;
+  & > * {
+    position: absolute;
+  }
+  & > *:first-child {
+    width: 1163.85px;
+    height: 620px;
+    object-fit: cover;
+    z-index: 600;
+  }
+  & > *:nth-child(2) {
+    z-index: 700;
+    width: 100%;
+    padding: 57px 121px 95px 121px;
+  }
+  & > *:last-child {
+    width: 253px;
+    height: 253px;
+    z-index: 800;
+    right: 19.85px;
+    bottom: 35px;
+  }
 `;
