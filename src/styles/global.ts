@@ -8,7 +8,9 @@ const GlobalStyle = createGlobalStyle`
     max-width: 100vw;
     margin: 0 auto;
   }
-  
+  body, button, input, textarea {
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  }
   * {
     box-sizing: border-box;
   }
