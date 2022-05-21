@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Router from './components/Router';
 import { api } from './services/api';
 import GlobalStyle from './styles/global';
+import { RecoilRoot } from 'recoil';
 
 function App() {
   useEffect(() => {
@@ -11,10 +12,10 @@ function App() {
     })();
   }, []);
   return (
-    <div>
+    <RecoilRoot>
       <GlobalStyle />
       <Router />
-    </div>
+    </RecoilRoot>
   );
 }
 
