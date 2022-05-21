@@ -3,6 +3,7 @@ import { useRecoilValue } from 'recoil';
 import styled from 'styled-components';
 import { api } from '../services/api';
 import codeState from '../stores';
+import Background from '../asset/ImgBackground.png';
 
 export default function Result() {
   const [commentList, setCommentList] = useState<string[]>([]);
@@ -17,7 +18,7 @@ export default function Result() {
     getResult(code);
   }, []);
   return (
-    <Container>
+    <Container url={Background}>
       <GroupName>
         <span>몽몽이들의 추억</span>
       </GroupName>
@@ -39,16 +40,24 @@ export default function Result() {
     </Container>
   );
 }
-export const Container = styled.div`
+export const Container = styled.div<{ url: string }>`
+  width: 100%;
+  height: 100vh;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  background-image: ${(props) => `url(${props.url})`};
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 export const GroupName = styled.div`
   width: 570px;
   height: 80px;
+
   margin-top: 40px;
   background: #ffffff;
   border: 2px solid #000000;
