@@ -41,7 +41,7 @@ axios, react-router-dom, recoil, styled-components, styled-reset
 ### **💼 Roles**
 |남주영|주송아|최세영|
 |------|---|---|
-|글 작성뷰(CommentForm), 팀 생성뷰(TeamForm), 그룹참여뷰(GroupMain)|만료뷰(Expire), 결과입장뷰(ResultIntro), 결과 모달 컴포넌트(shareModal)|결과 뷰(Result)|
+|글 작성뷰(CommentForm), 팀 생성뷰(TeamForm), 그룹참여뷰(GroupMain)|만료뷰(Expire), 결과입장뷰(ResultIntro), 결과 모달 컴포넌트(shareModal)|결과 뷰(Result)||||
 
 ### **📏 Code Convention**
 
