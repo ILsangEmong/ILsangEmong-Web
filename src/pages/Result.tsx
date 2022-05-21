@@ -24,9 +24,9 @@ export default function Result() {
       {commentList.map((data, idx) => {
         return <CommentContainer key={idx}>{data}</CommentContainer>;
       })}
-      <ShareBtn onClick={() => setIsModal(!isModal)}>
+      <StyledBtn onClick={() => setIsModal(!isModal)}>
         <span>일상추억 공유</span>
-      </ShareBtn>
+      </StyledBtn>
       {isModal && (
         <ResultModal>
           <span>완성된 우리의 이야기</span>
@@ -39,16 +39,17 @@ export default function Result() {
     </Container>
   );
 }
-const Container = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: column;
-  justify-content: column;
+  align-items: center;
+  justify-content: center;
 `;
 
-const GroupName = styled.div`
+export const GroupName = styled.div`
   width: 570px;
   height: 80px;
+  margin-top: 40px;
   background: #ffffff;
   border: 2px solid #000000;
   border-radius: 20px;
@@ -66,7 +67,9 @@ const GroupName = styled.div`
     color: #000000;
   }
 `;
-const ShareBtn = styled.button`
+export const StyledBtn = styled.button`
+  position: absolute;
+  bottom: 90px;
   width: 387px;
   height: 80px;
   background: #ffffff;
