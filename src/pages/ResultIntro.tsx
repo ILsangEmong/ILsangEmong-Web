@@ -1,6 +1,7 @@
 // import react from "react";
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import ResultIntroImg from '../assets/ImgResultInro.svg';
 
 // import {
 //   img1,
@@ -16,18 +17,7 @@ export default function ResultIntro() {
       <StTitle>GROUP NAME: 몽몽이들</StTitle>
 
       <StContainer>
-        <li>
-          <p>이미지1</p>
-        </li>
-        <li>
-          <p>이미지2</p>
-        </li>
-        <li>
-          <p>이미지3</p>
-        </li>
-        <li>
-          <p>이미지4</p>
-        </li>
+        <img src={ResultIntroImg} alt={'결과인트로'} />
       </StContainer>
 
       <Link to={'/group/result'}>
@@ -64,16 +54,13 @@ const StTitle = styled.div`
   line-height: 38px;
 
   margin-top: 40px;
-  margin-bottom: 95px;
+  margin-bottom: 70px;
 `;
 
 const StContainer = styled.ul`
-  & > li {
-    height: 620px;
-
-    flex: 1;
-
-    background: #d9d9d9;
+  & > img {
+    width: 1770px;
+    height: 718px;
   }
 
   width: 100%;
@@ -83,7 +70,7 @@ const StContainer = styled.ul`
   flex-wrap: wrap;
   gap: 25px;
 
-  margin-bottom: 75px;
+  margin-bottom: 2px;
 `;
 
 const StBtn = styled.button`

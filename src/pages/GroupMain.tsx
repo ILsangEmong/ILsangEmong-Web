@@ -8,28 +8,26 @@ import { GroupName, StyledBtn, Container } from './Result';
 export default function GroupMain() {
   const navigate = useNavigate();
   return (
-    <StContainer url={backgroundUrl}>
-      <Container>
-        <OurGroup>
-          <span>GROUP NAME: 몽몽이들</span>
-        </OurGroup>
+    <Container url={backgroundUrl}>
+      <OurGroup>
+        <span>GROUP NAME: 몽몽이들</span>
+      </OurGroup>
 
-        <WriteBtn onClick={() => navigate('/group/comment')}>
-          <span>기억 편지 쓰기</span>
-        </WriteBtn>
-      </Container>
-    </StContainer>
+      <WriteBtn onClick={() => navigate('/group/comment')}>
+        <span>기억 편지 쓰기</span>
+      </WriteBtn>
+    </Container>
   );
 }
 
-const StContainer = styled.main<{ url: string }>`
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  background-image: ${(props) => `url(${props.url})`};
-  background-repeat: no-repeat;
-  background-size: cover;
-`;
+// const StContainer = styled.main<{ url: string }>`
+//   width: 100%;
+//   height: 100vh;
+//   position: relative;
+//   background-image: ${(props) => `url(${props.url})`};
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// `;
 
 const OurGroup = styled(GroupName)`
   width: 571px;
