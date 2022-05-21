@@ -10,7 +10,20 @@
 
 ### **🧷directory structure**
 
-화이팅!
+```
+.
+├── public
+└── src
+    ├── components
+    ├── pages
+    ├── services
+    │   ├── api
+    │   │   └── types
+    │   ├── mock
+    │   └── remote
+    ├── stores
+    └── styles
+```
 
 ### **🧑‍💻 Developers**
 
