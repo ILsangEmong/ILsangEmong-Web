@@ -15,7 +15,7 @@ export default function Expire() {
         <Img4 /> */}
       </StContainer>
 
-      <Link to={'/group/expire'}>
+      <Link to={'/group/intro'}>
         <StBtn>입장하기</StBtn>
       </Link>
     </>
