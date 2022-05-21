@@ -1,9 +1,9 @@
 import { JuyeongService } from './juyeong';
-import { juyeongMock } from '../mock/juyeong';
 import { seyoungMock } from '../mock/seyoung';
 import { songahMock } from '../mock/songah';
 import { SeyoungService } from './seyoung';
 import { SongahService } from './songah';
+import { juyeongRemote } from '../remote/juyeong';
 
 export const api: APIService = getAPIMethod();
 
@@ -14,7 +14,7 @@ function getAPIMethod(): APIService {
 function provideAPIService(): APIService {
   const seyoungService = seyoungMock();
   const songahService = songahMock();
-  const juyeongService = juyeongMock();
+  const juyeongService = juyeongRemote();
 
   return {
     seyoungService,
