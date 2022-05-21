@@ -21,6 +21,7 @@ axios, react-router-dom, recoil, styled-components, styled-reset
 .
 ├── public
 └── src
+    ├── assets
     ├── components
     ├── pages
     ├── services
