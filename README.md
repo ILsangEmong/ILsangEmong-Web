@@ -1,46 +1,85 @@
-# Getting Started with Create React App
+# **Team ILsangEmong**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+일상이몽 - 함께 경험한 하나의 일상을 서로 다른 시각으로 회상하는 서비스
 
-## Available Scripts
+## **THE SOPT Sopkathon - Group 4**
 
-In the project directory, you can run:
+### **🛠Used stack & library**
 
-### `yarn start`
+화이팅!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### **🧷directory structure**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+화이팅!
 
-### `yarn test`
+### **🧑‍💻 Developers**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+화이팅!
 
-### `yarn build`
+### **💼 Roles**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+화이팅!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **📏 Code Convention**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **컴포넌트 선언**
 
-### `yarn eject`
+최상위는 function, 아래 함수는 const!
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`function Component() {`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`const handleaaaa = () => {`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`}`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`}`
 
-## Learn More
+- **핸들러 함수**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+기능 기준으로 쓰되 (`modalOpen` 등),
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+정말 이 함수가 하는 일이 특정 이벤트 전용이라면 `handle[이벤트당한요소][이벤트]` (`handleInputChange` 등)
+
+- **컴포넌트 이름**
+
+1. `buttonSearch`
+2. `searchButton`
+3. `btnSearch`
+4. `searchBtn`
+
+- **style 붙인 거**
+
+스타일만을 위해서 만든 컴포넌트는 styled를 붙이자
+
+❌ `StyledDiv`
+
+`StyledTitle`
+
+`StyledWrapper`
+
+`StyledImage`
+
+- **export , import**
+
+export한 친구의 이름 바꿔서 쓰지 말기!
+
+안 그래도 되도록 변수/함수 이름은 자세하게 쓰기
+
+### 👨‍💻팀 협업 룰
+
+1. 메인에 머지할 때 무조건 다같이 하기
+2. 졸리면 웃음벨 치기
+3. 10분 이상 고민하는 경우 `도움` 요청하기
+
+### **🌿 Branch Strategy**
+
+- git flow 기반
+- 이슈를 기능 단위로 파고, 그 이슈 단위로 브랜치 파서 기능 개발 후 main에 merge
+
+`ex. 브랜치명 feat/#이슈번호`
+
+### **📌 Commit Convention**
+
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8394124a-ed99-4168-9c06-48b9109dab2d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220521%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220521T131626Z&X-Amz-Expires=86400&X-Amz-Signature=5e8d736934b030772793d50a67031f104f3538369025db8a6201f77ff4c15cd5&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
+
+###
