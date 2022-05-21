@@ -3,3 +3,8 @@ export interface GroupInfo {
   startTime: Date;
   endTime: Date;
 }
+
+export interface CommentInfo {
+  inviteCode: string;
+  comment: string;
+}

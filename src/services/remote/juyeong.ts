@@ -1,5 +1,5 @@
 import { JuyeongService } from '../api/juyeong';
-import { GroupInfo } from '../api/types/juyeong';
+import { CommentInfo, GroupInfo } from '../api/types/juyeong';
 import { API } from './base';
 
 export function juyeongRemote(): JuyeongService {
@@ -8,7 +8,14 @@ export function juyeongRemote(): JuyeongService {
     return response.data.inviteCode;
   };
 
+  const createComment = async (commentInfo: CommentInfo) => {
+    const response = await API.put({ url: '/comment', data: commentInfo });
+    console.log(response);
+    return { isSuccess: response.success };
+  };
+
   return {
     createGroup,
+    createComment,
   };
 }

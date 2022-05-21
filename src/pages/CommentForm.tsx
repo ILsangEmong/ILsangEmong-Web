@@ -1,8 +1,15 @@
-import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { api } from '../services/api';
 
 export default function CommentForm() {
+  const createComment = async () => {
+    const response = await api.juyeongService.createComment({
+      inviteCode: 'vQHTGS',
+      comment: '우리 몽몽이들은 너무너무 귀엽다',
+    });
+    console.log(response);
+  };
   // // 리뷰 텍스트 핸들링
   // const handleTextChange = (e) => {
   //   if (e.target.value) {
@@ -24,7 +31,7 @@ export default function CommentForm() {
       </StContainer>
 
       <Link to={'/group'}>
-        <StBtn>작성완료</StBtn>
+        <StBtn onClick={createComment}>작성완료</StBtn>
       </Link>
     </StCommentForm>
   );

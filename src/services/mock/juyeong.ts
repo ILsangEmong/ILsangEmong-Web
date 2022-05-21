@@ -6,8 +6,14 @@ export function juyeongMock(): JuyeongService {
     return '참여 코드';
   };
 
+  const createComment = async () => {
+    await wait(2000);
+    return { isSuccess: true };
+  };
+
   return {
     createGroup,
+    createComment,
   };
 }
 
