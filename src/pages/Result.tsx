@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { useRecoilValue } from 'recoil';
+// import { useRecoilValue } from 'recoil';
 import styled from 'styled-components';
 import { api } from '../services/api';
-import codeState from '../stores';
+// import codeState from '../stores';
 // import Background from '../asset/ImgBackground.png';
 import { default as imgBg } from '../assets/bg_img.png';
 import { default as ImgLetter } from '../assets/img_letter.png';
@@ -10,16 +10,17 @@ import { default as ImgStamp } from '../assets/stamp.svg';
 
 export default function Result() {
   const [commentList, setCommentList] = useState<string[]>([]);
-  const code = useRecoilValue(codeState);
-  console.log('dd', code);
+  // const code = useRecoilValue(codeState);
+  // console.log('dd', code);
   const [isModal, setIsModal] = useState(false);
   const getResult = async (code) => {
     console.log(code);
-    const list = await api.seyoungService.getResult('DRW9pD');
+    const list = await api.seyoungService.getResult(code);
     setCommentList(list);
   };
 
   useEffect(() => {
+    const code = localStorage.getItem('code');
     getResult(code);
   }, []);
   return (

@@ -2,14 +2,14 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { api } from '../services/api';
 import { useState } from 'react';
-import { useRecoilValue } from 'recoil';
-import codeState from '../stores';
+// import { useRecoilValue } from 'recoil';
+// import codeState from '../stores';
 import { CommentInfo } from '../services/api/types/juyeong';
 import { ReactComponent as ImgComment } from '../assets/img_comment.svg';
 
 export default function CommentForm() {
   const [comment, setComment] = useState('');
-  const code = useRecoilValue(codeState);
+  const code = localStorage.getItem('code');
   const createComment = async (commentInfo: CommentInfo) => {
     const response = await api.juyeongService.createComment(commentInfo);
     console.log(response);
@@ -30,7 +30,7 @@ export default function CommentForm() {
       </StContainer>
 
       <Link to={'/group'}>
-        <StBtn onClick={() => createComment({ inviteCode: code, comment: comment })}>
+        <StBtn onClick={() => code && createComment({ inviteCode: code, comment: comment })}>
           작성완료
         </StBtn>
       </Link>
