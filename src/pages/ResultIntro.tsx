@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export default function ResultIntro() {
+  console.log('>>>>>');
   return (
     <>
       <StTitle>
@@ -16,7 +17,7 @@ export default function ResultIntro() {
       <Img4 /> */}
       </StContainer>
 
-      <Link to={'/Result'}>
+      <Link to={'/group/result'}>
         <StBtn>글 확인하기</StBtn>
       </Link>
     </>
