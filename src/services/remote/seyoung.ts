@@ -1,10 +1,9 @@
 import { SeyoungService } from '../api/seyoung';
 import { API } from './base';
-
+import { SEYOUNG_DATA } from '../mock/seyoung.data';
 export function seyoungRemote(): SeyoungService {
-  const getResult = async (issueID: string) => {
-    const response = await API.get({ url: `/team/feedback/${issueID}/pin` });
-    if (response.status === 200) return { isSuccess: true, isBookmarked: response.data?.isPinned };
+  const getResult = async () => {
+    return SEYOUNG_DATA.RESULT_LIST;
   };
 
   return {

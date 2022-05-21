@@ -1,3 +1,3 @@
 export interface SeyoungService {
-  getResult(issueID: string): Promise<any>;
+  getResult(code: string): Promise<any>;
 }
