@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useRecoilValue } from 'recoil';
 import codeState from '../stores';
 import { CommentInfo } from '../services/api/types/juyeong';
+import { ReactComponent as ImgComment } from '../assets/img_comment.svg';
 
 export default function CommentForm() {
   const [comment, setComment] = useState('');
@@ -33,6 +34,7 @@ export default function CommentForm() {
           작성완료
         </StBtn>
       </Link>
+      <ImgComment />
     </StCommentForm>
   );
 }
@@ -41,6 +43,12 @@ const StCommentForm = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  & > *:last-child {
+    position: absolute;
+    top: 444px;
+    left: 1205px;
+  }
 `;
 const StTitle = styled.div`
   width: 571px;
@@ -99,6 +107,12 @@ const StInputReviewText = styled.textarea`
 
   outline: none;
   resize: none;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+
+  letter-spacing: -0.01em;
 
   &::placeholder {
     font-style: normal;
