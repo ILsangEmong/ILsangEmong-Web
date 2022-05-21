@@ -5,11 +5,11 @@
 ## **THE SOPT Sopkathon - Group 4**
 
 ### **🛠Used stack & library**
-#### ** Used stack **
+#### Used stack
 ```
 react, typescript, CRA
 ```
-#### ** Used library **
+#### Used library
 ```
 axios, react-router-dom, recoil, styled-components, styled-reset
 
