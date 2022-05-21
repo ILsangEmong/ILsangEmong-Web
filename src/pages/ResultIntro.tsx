@@ -107,8 +107,4 @@ const StBtn = styled.button`
   text-align: center;
 
   margin-bottom: 90px;
-
-  // &:hover {
-  //   cursor: pointer;
-  // }
 `;
