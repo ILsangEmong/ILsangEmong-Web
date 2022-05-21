@@ -1,11 +1,10 @@
 import { SeyoungService } from '../api/seyoung';
 import { API } from './base';
-import { SEYOUNG_DATA } from '../mock/seyoung.data';
 export function seyoungRemote(): SeyoungService {
-  const getResult = async () => {
-    return SEYOUNG_DATA.RESULT_LIST;
+  const getResult = async (code: string) => {
+    const response = await API.get({ url: `comment/${code}` });
+    return response.data;
   };
-
   return {
     getResult,
   };

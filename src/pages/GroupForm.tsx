@@ -31,6 +31,7 @@ export default function GroupForm() {
       >
         시연하러 가기
       </button>
+      <button>혁진아 여기 안쓰는 api 연결할게</button>
     </StWrapper>
   );
 }
