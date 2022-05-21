@@ -21,6 +21,7 @@ axios, react-router-dom, recoil, styled-components, styled-reset
 .
 ├── public
 └── src
+    ├── assets
     ├── components
     ├── pages
     ├── services
@@ -110,6 +111,6 @@ export한 친구의 이름 바꿔서 쓰지 말기!
 ### **🧾 구현기능 설명**주
 |남주영|주송아|최세영|
 |------|---|---|
-||퍼블리싱(페이지: CommentForm, Expire, ResultIntro),리드미 작성,라우터 |퍼블리싱(페이지: Result, Expire, GroupMain), mock api 연결 / mock data 생성, 리드미 작성|
+|퍼블리싱(페이지: CommentForm, GroupForm, GroupMain),초기세팅,라우터|퍼블리싱(페이지: CommentForm, Expire, ResultIntro),리드미 작성,라우터 |퍼블리싱(페이지: Result, Expire, GroupMain), mock api 연결 / mock data 생성, 리드미 작성|
 
 
