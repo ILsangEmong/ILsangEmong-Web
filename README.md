@@ -41,7 +41,7 @@ axios, react-router-dom, recoil, styled-components, styled-reset
 ### **💼 Roles**
 |남주영|주송아|최세영|
 |------|---|---|
-|글 작성뷰(CommentForm),팀 생성뷰(TeamForm),그룹참여뷰(GroupMain)|글 작성뷰(CommentForm), 만료뷰(Expire),결과입장뷰(ResultIntro)|그룹참여뷰(GroupMain), 결과 뷰(Result)|
+|글 작성뷰(CommentForm),팀 생성뷰(TeamForm),그룹참여뷰(GroupMain)|글 작성뷰(CommentForm), 만료뷰(Expire),결과입장뷰(ResultIntro)|그룹참여뷰(GroupMain), 결과 뷰(Result), 만료뷰(Expire)|
 
 ### **📏 Code Convention**
 
@@ -110,6 +110,6 @@ export한 친구의 이름 바꿔서 쓰지 말기!
 ### **🧾 구현기능 설명**주
 |남주영|주송아|최세영|
 |------|---|---|
-||퍼블리싱(페이지: CommentForm, Expire, ResultIntro),리드미 작성,라우터 |.|
+||퍼블리싱(페이지: CommentForm, Expire, ResultIntro),리드미 작성,라우터 |퍼블리싱(페이지: Result, Expire, GroupMain), mock api 연결 / mock data 생성, 리드미 작성|
 
 
