@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+// const BASEURL = 'http://3.39.231.72:8000';
 const BASEURL = '';
 
 const baseHeaders = {
