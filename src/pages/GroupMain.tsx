@@ -34,11 +34,11 @@ const StContainer = styled.main<{ url: string }>`
 const OurGroup = styled(GroupName)`
   width: 571px;
   height: 80px;
-  position: absolute;
-  margin-top: 0;
-  top: 40px;
+
+  z-index: 500;
 `;
 const WriteBtn = styled(StyledBtn)`
   width: 450px;
   height: 80px;
+  z-index: 500;
 `;
