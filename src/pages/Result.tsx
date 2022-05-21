@@ -46,8 +46,8 @@ export const Container = styled.div<{ url: string }>`
 
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
   background-image: ${(props) => `url(${props.url})`};
   background-repeat: no-repeat;
@@ -64,6 +64,7 @@ export const GroupName = styled.div`
   border-radius: 20px;
   text-align: center;
   display: flex;
+  margin-bottom: 790px;
   align-items: center;
   justify-content: center;
   & > span {
@@ -77,21 +78,38 @@ export const GroupName = styled.div`
   }
 `;
 export const StyledBtn = styled.button`
-  position: absolute;
-  bottom: 90px;
+  // position: relative;
   width: 387px;
   height: 80px;
-  background: #ffffff;
-  border: 2px solid #000000;
-  box-shadow: 10px 10px 0px #000000;
-  border-radius: 20px;
-  text-align: center;
-
+  // background: #ffffff;
+  // border: 2px solid #000000;
+  // box-shadow: 10px 10px 0px #000000;
+  // border-radius: 20px;
+  // text-align: center;
+  // margin-bottom: 90px;
   & > span {
     font-weight: 700;
     font-size: 32px;
     color: #000000;
   }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 20px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+
+  margin-top: 40px;
+  margin-bottom: 75px;
 `;
 const CommentContainer = styled.div``;
 const ResultModal = styled.div`

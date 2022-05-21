@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { ImgExpire } from '../asset';
+import { ReactComponent as ImgExpire } from '../assets/background_expire.svg';
 
 export default function Expire() {
   console.log('>>>>>expire page 입니다');
