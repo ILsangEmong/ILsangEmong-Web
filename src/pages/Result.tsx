@@ -22,7 +22,7 @@ export default function Result() {
       {commentList.map((data, idx) => {
         return <CommentContainer key={idx}>{data}</CommentContainer>;
       })}
-      <ShareBtn onChange={() => setIsModal(!isModal)}>공유하기</ShareBtn>
+      <ShareBtn onClick={() => setIsModal(!isModal)}>공유하기</ShareBtn>
       {isModal && (
         <ResultModal>
           <span>완성된 우리의 이야기</span>
@@ -45,4 +45,9 @@ const Container = styled.div`
 const GroupName = styled.div``;
 const ShareBtn = styled.button``;
 const CommentContainer = styled.div``;
-const ResultModal = styled.div``;
+const ResultModal = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: column;
+  justify-content: column;
+`;
