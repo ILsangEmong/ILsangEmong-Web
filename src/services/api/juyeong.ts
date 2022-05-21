@@ -1,3 +1,5 @@
+import { GroupInfo } from './types/juyeong';
+
 export interface JuyeongService {
-  getResult(issueID: string): Promise<any>;
+  createGroup(groupInfo: GroupInfo): Promise<string>;
 }
