@@ -1,7 +1,15 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { api } from '../services/api';
 
 export default function CommentForm() {
+  const createComment = async () => {
+    const response = await api.juyeongService.createComment({
+      inviteCode: 'vQHTGS',
+      comment: '우리 몽몽이들은 너무너무 귀엽다',
+    });
+    console.log(response);
+  };
   return (
     <>
       <StTitle>몽몽이들</StTitle>
@@ -9,7 +17,7 @@ export default function CommentForm() {
       <StContainer></StContainer>
 
       <Link to={'/group'}>
-        <StBtn>작성완료</StBtn>
+        <StBtn onClick={createComment}>작성완료</StBtn>
       </Link>
     </>
   );
