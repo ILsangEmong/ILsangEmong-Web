@@ -16,6 +16,7 @@ export default function GroupMain() {
       <WriteBtn onClick={() => navigate('/group/comment')}>
         <span>기억 편지 쓰기</span>
       </WriteBtn>
+      <button onClick={() => navigate('/group/expire')}>시연용 강제 기한 끝내기 버튼</button>
     </Container>
   );
 }
