@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { ImgExpire } from '../asset';
 
 export default function Expire() {
   console.log('>>>>>expire page 입니다');
@@ -9,11 +10,7 @@ export default function Expire() {
       <StTitle>GROUP NAME: 몽몽이들</StTitle>
 
       <StContainer>
-        <p>추억배달중</p>
-        {/* <Img1 />
-        <Img2 />
-        <Img3 />
-        <Img4 /> */}
+        <ImgExpire />
       </StContainer>
 
       <Link to={'/group/intro'}>
