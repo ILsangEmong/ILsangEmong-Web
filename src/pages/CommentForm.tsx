@@ -18,13 +18,9 @@ export default function CommentForm() {
   return (
     <StCommentForm>
       <StTitle>GROUP NAME: 몽몽이들</StTitle>
-      <div>
-        여러분들이 함께 경험한 일상을 기억 편지에 적어주세요
-        <br />
-        배달은 저희가 합니다
-      </div>
       <StContainer>
         <label>Q. 오늘의 일상 속 기억하고 싶은 일은 무엇이었나요?</label>
+        <div>여러분들이 함께 경험한 일상을 기억 편지에 적어주세요. 배달은 저희가 합니다.</div>
         <StInputReviewText
           value={comment}
           onChange={(e) => setComment(e.target.value)}
@@ -48,12 +44,6 @@ const StCommentForm = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  & > *:nth-child(2) {
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 51px;
-    text-align: center;
-  }
   & > *:last-child {
     position: absolute;
     top: 444px;
@@ -81,7 +71,7 @@ const StTitle = styled.div`
   line-height: 38px;
 
   margin-top: 40px;
-  margin-bottom: 103px;
+  margin-bottom: 160px;
 `;
 
 const StContainer = styled.div`
@@ -95,7 +85,18 @@ const StContainer = styled.div`
     line-height: 38px;
     color: #000000;
 
+    margin-bottom: 8px;
+  }
+  & > *:nth-child(2) {
     margin-bottom: 60px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    /* identical to box height, or 130% */
+
+    /* 4조_gray */
+
+    color: #b1b1b1;
   }
 
   display: flex;
