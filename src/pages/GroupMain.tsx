@@ -12,6 +12,9 @@ export default function GroupMain() {
       <OurGroup>GROUP NAME: 몽몽이들</OurGroup>
 
       <WriteBtn onClick={() => navigate('/group/comment')}>기억 편지 쓰기</WriteBtn>
+      <button onClick={() => navigate('/group/expire')}>
+        시연 위해 바로 기한 만료하는 버튼 ㅎㅎ
+      </button>
     </StContainer>
   );
 }
