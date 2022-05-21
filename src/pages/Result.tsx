@@ -7,10 +7,12 @@ import codeState from '../stores';
 export default function Result() {
   const [commentList, setCommentList] = useState<string[]>([]);
   const code = useRecoilValue(codeState);
+  const [isModal, setIsModal] = useState(false);
   const getResult = async (code) => {
     const list = await api.seyoungService.getResult(code);
     setCommentList(list);
   };
+
   useEffect(() => {
     getResult(code);
   }, []);
@@ -20,7 +22,16 @@ export default function Result() {
       {commentList.map((data, idx) => {
         return <CommentContainer key={idx}>{data}</CommentContainer>;
       })}
-      <ShareBtn>공유하기</ShareBtn>
+      <ShareBtn onChange={() => setIsModal(!isModal)}>공유하기</ShareBtn>
+      {isModal && (
+        <ResultModal>
+          <span>완성된 우리의 이야기</span>
+          {commentList.map((data, idx) => {
+            return <CommentContainer key={idx}>{data}</CommentContainer>;
+          })}
+          <button>공유하기</button>
+        </ResultModal>
+      )}
     </Container>
   );
 }
@@ -34,3 +45,4 @@ const Container = styled.div`
 const GroupName = styled.div``;
 const ShareBtn = styled.button``;
 const CommentContainer = styled.div``;
+const ResultModal = styled.div``;
