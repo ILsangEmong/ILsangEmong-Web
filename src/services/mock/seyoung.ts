@@ -1,9 +1,10 @@
 import { SeyoungService } from '../api/seyoung';
+import { SEYOUNG_DATA } from './seyoung.data';
 
 export function seyoungMock(): SeyoungService {
   const getResult = async () => {
     await wait(2000);
-    return [];
+    return SEYOUNG_DATA.RESULT_LIST;
   };
 
   return {
