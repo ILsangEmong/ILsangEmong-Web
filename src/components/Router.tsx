@@ -1,9 +1,9 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 export default function Router() {
   return (
     <BrowserRouter>
-      <Routes>
+      {/* <Routes>
         <Route path="/create" element={<TeamForm />} />
         <Route path="/group/*" element={<GroupMain />}>
           <Route path="comment" element={<CommentForm />} />
@@ -13,7 +13,7 @@ export default function Router() {
           <Route path="*" element={<div>몽몽이들 미안! 404 에러야!</div>} />
         </Route>
         <Route path="*" element={<div>몽몽이들 미안! 404 에러야!</div>} />
-      </Routes>
+      </Routes> */}
     </BrowserRouter>
   );
 }
