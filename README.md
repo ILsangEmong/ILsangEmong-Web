@@ -41,9 +41,7 @@ axios, react-router-dom, recoil, styled-components, styled-reset
 ### **💼 Roles**
 |남주영|주송아|최세영|
 |------|---|---|
-|글 작성뷰(CommentForm)|만료뷰(Expire)|결과 뷰(Result)|
-|팀 생성뷰(TeamForm)|결과입장뷰(ResultIntro)|.|
-|그룹참여뷰(GroupMain)|.|.|
+|글 작성뷰(CommentForm),팀 생성뷰(TeamForm),그룹참여뷰(GroupMain)|글 작성뷰(CommentForm), 만료뷰(Expire),결과입장뷰(ResultIntro)|그룹참여뷰(GroupMain), 결과 뷰(Result)|
 
 ### **📏 Code Convention**
 
@@ -108,3 +106,8 @@ export한 친구의 이름 바꿔서 쓰지 말기!
 <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8394124a-ed99-4168-9c06-48b9109dab2d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220521%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220521T131626Z&X-Amz-Expires=86400&X-Amz-Signature=5e8d736934b030772793d50a67031f104f3538369025db8a6201f77ff4c15cd5&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
 
 ###
+
+### **🧾 구현기능 설명**
+
+
+
