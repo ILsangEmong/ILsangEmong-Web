@@ -4,13 +4,13 @@ import Expire from '../pages/Expire';
 import GroupMain from '../pages/GroupMain';
 import Result from '../pages/Result';
 import ResultIntro from '../pages/ResultIntro';
-import TeamForm from '../pages/TeamForm';
+import GroupForm from '../pages/GroupForm';
 
 export default function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/create" element={<TeamForm />} />
+        <Route path="/create" element={<GroupForm />} />
         <Route path="/group/*" element={<GroupMain />}>
           <Route path="comment" element={<CommentForm />} />
           <Route path="expire" element={<Expire />} />
