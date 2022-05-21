@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { api } from '../services/api';
 import codeState from '../stores';
 import Background from '../asset/ImgBackground.png';
+import ImgLine from '../asset/ImgLine.svg';
 
 export default function Result() {
   const [commentList, setCommentList] = useState<string[]>([]);
@@ -22,9 +23,11 @@ export default function Result() {
       <GroupName>
         <span>몽몽이들의 추억</span>
       </GroupName>
-      {commentList.map((data, idx) => {
-        return <CommentContainer key={idx}>{data}</CommentContainer>;
-      })}
+      <StContentWrapper url={ImgLine}>
+        {commentList.map((data, idx) => {
+          return <CommentContainer key={idx}>{data}</CommentContainer>;
+        })}
+      </StContentWrapper>
       <StyledBtn onClick={() => setIsModal(!isModal)}>
         <span>일상추억 공유</span>
       </StyledBtn>
@@ -40,6 +43,8 @@ export default function Result() {
     </Container>
   );
 }
+const StContentWrapper = styled.div<{ url: string }>``;
+
 export const Container = styled.div<{ url: string }>`
   width: 100%;
   height: 100vh;
