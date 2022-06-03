@@ -3,7 +3,7 @@
 일상이몽 - 함께 경험한 하나의 일상을 서로 다른 시각으로 회상하는 서비스
 
 ## **THE SOPT Sopkathon - Group 4**
-SOPT 30기 솝커톤(무박2일 해커) 4조입니다!
+SOPT 30기 솝커톤(무박2일 해커톤) 4조입니다!
 
 ### **🛠Used stack & library**
 #### Used stack
